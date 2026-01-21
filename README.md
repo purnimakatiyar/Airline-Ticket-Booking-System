@@ -2,6 +2,8 @@ Airline Ticket Booking System
 
 A Django-based airline booking system that manages flights, seats, bookings, payments, cancellations, and refunds. The project uses Django REST Framework for APIs and includes admin tools and optional Celery support for handling seat-hold expiration.
 
+<img width="1919" height="620" alt="Screenshot 2026-01-21 121428" src="https://github.com/user-attachments/assets/28d05c36-7b97-4362-a742-e49c87ed31d9" />
+
 Features
 
 Flight and seat management
