@@ -1,0 +1,1525 @@
+{
+  "info": {
+    "_postman_id": "a4ba58b2-4a79-4c43-899c-ecc012a230c6",
+    "name": "Airline Booking",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32148749"
+  },
+  "item": [
+    {
+      "name": "flights",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/flights/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "flights",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl http://localhost:8000/api/flights/"
+      },
+      "response": [
+        {
+          "name": "flights",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/flights/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "flights",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:44:42 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1082"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"count\": 4,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"flight_number\": \"DL303\",\n            \"origin\": \"Miami (MIA)\",\n            \"destination\": \"Seattle (SEA)\",\n            \"departure_time\": \"2026-01-30 14:41:22\",\n            \"arrival_time\": \"2026-01-30 21:11:22\",\n            \"total_seats\": 200,\n            \"available_seats\": 200,\n            \"price\": \"349.99\",\n            \"created_at\": \"2026-01-20 14:41:25\"\n        },\n        {\n            \"id\": 1,\n            \"flight_number\": \"AA101\",\n            \"origin\": \"New York (JFK)\",\n            \"destination\": \"Los Angeles (LAX)\",\n            \"departure_time\": \"2026-01-27 14:41:22\",\n            \"arrival_time\": \"2026-01-27 20:41:22\",\n            \"total_seats\": 180,\n            \"available_seats\": 180,\n            \"price\": \"299.99\",\n            \"created_at\": \"2026-01-20 14:41:22\"\n        },\n        {\n            \"id\": 2,\n            \"flight_number\": \"UA202\",\n            \"origin\": \"San Francisco (SFO)\",\n            \"destination\": \"Chicago (ORD)\",\n            \"departure_time\": \"2026-01-25 14:41:22\",\n            \"arrival_time\": \"2026-01-25 18:41:22\",\n            \"total_seats\": 150,\n            \"available_seats\": 150,\n            \"price\": \"249.99\",\n            \"created_at\": \"2026-01-20 14:41:24\"\n        },\n        {\n            \"id\": 4,\n            \"flight_number\": \"SW404\",\n            \"origin\": \"Dallas (DFW)\",\n            \"destination\": \"Boston (BOS)\",\n            \"departure_time\": \"2026-01-23 14:41:22\",\n            \"arrival_time\": \"2026-01-23 18:41:22\",\n            \"total_seats\": 120,\n            \"available_seats\": 120,\n            \"price\": \"199.99\",\n            \"created_at\": \"2026-01-20 14:41:26\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "available seats in flights",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/flights/1/available_seats/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "flights",
+            "1",
+            "available_seats",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl http://localhost:8000/api/flights/1/available_seats/"
+      },
+      "response": [
+        {
+          "name": "available seats in flights",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/flights/1/available_seats/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "flights",
+                "1",
+                "available_seats",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:45:14 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "13189"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 45,\n        \"seat_number\": \"10A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 46,\n        \"seat_number\": \"10B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 47,\n        \"seat_number\": \"10C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 48,\n        \"seat_number\": \"10D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 49,\n        \"seat_number\": \"10E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 50,\n        \"seat_number\": \"10F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 51,\n        \"seat_number\": \"11A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 52,\n        \"seat_number\": \"11B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 53,\n        \"seat_number\": \"11C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 54,\n        \"seat_number\": \"11D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 55,\n        \"seat_number\": \"11E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 56,\n        \"seat_number\": \"11F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 57,\n        \"seat_number\": \"12A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 58,\n        \"seat_number\": \"12B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 59,\n        \"seat_number\": \"12C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 60,\n        \"seat_number\": \"12D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 61,\n        \"seat_number\": \"12E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 62,\n        \"seat_number\": \"12F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 63,\n        \"seat_number\": \"13A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 64,\n        \"seat_number\": \"13B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 65,\n        \"seat_number\": \"13C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 66,\n        \"seat_number\": \"13D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 67,\n        \"seat_number\": \"13E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 68,\n        \"seat_number\": \"13F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 69,\n        \"seat_number\": \"14A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 70,\n        \"seat_number\": \"14B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 71,\n        \"seat_number\": \"14C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 72,\n        \"seat_number\": \"14D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 73,\n        \"seat_number\": \"14E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 74,\n        \"seat_number\": \"14F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 75,\n        \"seat_number\": \"15A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 76,\n        \"seat_number\": \"15B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 77,\n        \"seat_number\": \"15C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 78,\n        \"seat_number\": \"15D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 79,\n        \"seat_number\": \"15E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 80,\n        \"seat_number\": \"15F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 81,\n        \"seat_number\": \"16A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 82,\n        \"seat_number\": \"16B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 83,\n        \"seat_number\": \"16C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 84,\n        \"seat_number\": \"16D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 85,\n        \"seat_number\": \"16E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 86,\n        \"seat_number\": \"16F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 87,\n        \"seat_number\": \"17A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 88,\n        \"seat_number\": \"17B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 89,\n        \"seat_number\": \"17C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 90,\n        \"seat_number\": \"17D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 91,\n        \"seat_number\": \"17E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 92,\n        \"seat_number\": \"17F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 93,\n        \"seat_number\": \"18A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 94,\n        \"seat_number\": \"18B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 95,\n        \"seat_number\": \"18C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 96,\n        \"seat_number\": \"18D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 97,\n        \"seat_number\": \"18E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 98,\n        \"seat_number\": \"18F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 99,\n        \"seat_number\": \"19A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 100,\n        \"seat_number\": \"19B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 101,\n        \"seat_number\": \"19C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 102,\n        \"seat_number\": \"19D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 103,\n        \"seat_number\": \"19E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 104,\n        \"seat_number\": \"19F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 1,\n        \"seat_number\": \"1A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 2,\n        \"seat_number\": \"1B\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 3,\n        \"seat_number\": \"1C\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 4,\n        \"seat_number\": \"1D\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 105,\n        \"seat_number\": \"20A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 106,\n        \"seat_number\": \"20B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 107,\n        \"seat_number\": \"20C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 108,\n        \"seat_number\": \"20D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 109,\n        \"seat_number\": \"20E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 110,\n        \"seat_number\": \"20F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 111,\n        \"seat_number\": \"21A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 112,\n        \"seat_number\": \"21B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 113,\n        \"seat_number\": \"21C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 114,\n        \"seat_number\": \"21D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 115,\n        \"seat_number\": \"21E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 116,\n        \"seat_number\": \"21F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 117,\n        \"seat_number\": \"22A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 118,\n        \"seat_number\": \"22B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 119,\n        \"seat_number\": \"22C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 120,\n        \"seat_number\": \"22D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 121,\n        \"seat_number\": \"22E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 122,\n        \"seat_number\": \"22F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 123,\n        \"seat_number\": \"23A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 124,\n        \"seat_number\": \"23B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 125,\n        \"seat_number\": \"23C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 126,\n        \"seat_number\": \"23D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 127,\n        \"seat_number\": \"23E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 128,\n        \"seat_number\": \"23F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 129,\n        \"seat_number\": \"24A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 130,\n        \"seat_number\": \"24B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 131,\n        \"seat_number\": \"24C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 132,\n        \"seat_number\": \"24D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 133,\n        \"seat_number\": \"24E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 134,\n        \"seat_number\": \"24F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 135,\n        \"seat_number\": \"25A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 136,\n        \"seat_number\": \"25B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 137,\n        \"seat_number\": \"25C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 138,\n        \"seat_number\": \"25D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 139,\n        \"seat_number\": \"25E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 140,\n        \"seat_number\": \"25F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 141,\n        \"seat_number\": \"26A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 142,\n        \"seat_number\": \"26B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 143,\n        \"seat_number\": \"26C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 144,\n        \"seat_number\": \"26D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 145,\n        \"seat_number\": \"26E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 146,\n        \"seat_number\": \"26F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 147,\n        \"seat_number\": \"27A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 148,\n        \"seat_number\": \"27B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 149,\n        \"seat_number\": \"27C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 150,\n        \"seat_number\": \"27D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 151,\n        \"seat_number\": \"27E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 152,\n        \"seat_number\": \"27F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 153,\n        \"seat_number\": \"28A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 154,\n        \"seat_number\": \"28B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 155,\n        \"seat_number\": \"28C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 156,\n        \"seat_number\": \"28D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 157,\n        \"seat_number\": \"28E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 158,\n        \"seat_number\": \"28F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 159,\n        \"seat_number\": \"29A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 160,\n        \"seat_number\": \"29B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 161,\n        \"seat_number\": \"29C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 162,\n        \"seat_number\": \"29D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 163,\n        \"seat_number\": \"29E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 164,\n        \"seat_number\": \"29F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 5,\n        \"seat_number\": \"2A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 6,\n        \"seat_number\": \"2B\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 7,\n        \"seat_number\": \"2C\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 8,\n        \"seat_number\": \"2D\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 165,\n        \"seat_number\": \"30A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 166,\n        \"seat_number\": \"30B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 167,\n        \"seat_number\": \"30C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 168,\n        \"seat_number\": \"30D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 169,\n        \"seat_number\": \"30E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 170,\n        \"seat_number\": \"30F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 171,\n        \"seat_number\": \"31A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 172,\n        \"seat_number\": \"31B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 173,\n        \"seat_number\": \"31C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 174,\n        \"seat_number\": \"31D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 175,\n        \"seat_number\": \"31E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 176,\n        \"seat_number\": \"31F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 177,\n        \"seat_number\": \"32A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 178,\n        \"seat_number\": \"32B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 179,\n        \"seat_number\": \"32C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 180,\n        \"seat_number\": \"32D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 9,\n        \"seat_number\": \"3A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 10,\n        \"seat_number\": \"3B\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 11,\n        \"seat_number\": \"3C\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 12,\n        \"seat_number\": \"3D\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 13,\n        \"seat_number\": \"4A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 14,\n        \"seat_number\": \"4B\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 15,\n        \"seat_number\": \"4C\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 16,\n        \"seat_number\": \"4D\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 17,\n        \"seat_number\": \"5A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 18,\n        \"seat_number\": \"5B\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 19,\n        \"seat_number\": \"5C\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 20,\n        \"seat_number\": \"5D\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 21,\n        \"seat_number\": \"6A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 22,\n        \"seat_number\": \"6B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 23,\n        \"seat_number\": \"6C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 24,\n        \"seat_number\": \"6D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 25,\n        \"seat_number\": \"6E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 26,\n        \"seat_number\": \"6F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 27,\n        \"seat_number\": \"7A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 28,\n        \"seat_number\": \"7B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 29,\n        \"seat_number\": \"7C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 30,\n        \"seat_number\": \"7D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 31,\n        \"seat_number\": \"7E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 32,\n        \"seat_number\": \"7F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 33,\n        \"seat_number\": \"8A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 34,\n        \"seat_number\": \"8B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 35,\n        \"seat_number\": \"8C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 36,\n        \"seat_number\": \"8D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 37,\n        \"seat_number\": \"8E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 38,\n        \"seat_number\": \"8F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 39,\n        \"seat_number\": \"9A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 40,\n        \"seat_number\": \"9B\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 41,\n        \"seat_number\": \"9C\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 42,\n        \"seat_number\": \"9D\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 43,\n        \"seat_number\": \"9E\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    {\n        \"id\": 44,\n        \"seat_number\": \"9F\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"flight_id\": 1,\r\n    \"seat_id\": 5,\r\n    \"passenger_name\": \"John Doe\",\r\n    \"passenger_email\": \"john@example.com\",\r\n    \"passenger_phone\": \"+1234567890\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST http://localhost:8000/api/bookings/ \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"flight_id\": 1,\r\n    \"seat_id\": 5,\r\n    \"passenger_name\": \"John Doe\",\r\n    \"passenger_email\": \"john@example.com\",\r\n    \"passenger_phone\": \"+1234567890\"\r\n  }'"
+      },
+      "response": [
+        {
+          "name": "booking",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"flight_id\": 1,\r\n    \"seat_id\": 5,\r\n    \"passenger_name\": \"John Doe\",\r\n    \"passenger_email\": \"john@example.com\",\r\n    \"passenger_phone\": \"+1234567890\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                ""
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:45:44 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, POST, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1003"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"booking_reference\": \"BK5985A5A2\",\n    \"flight\": 1,\n    \"seat\": 5,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"SEAT_HELD\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 14:45:44\",\n    \"updated_at\": \"2026-01-20 14:45:44\",\n    \"seat_held_at\": \"2026-01-20 14:45:44\",\n    \"payment_initiated_at\": null,\n    \"confirmed_at\": null,\n    \"cancelled_at\": null,\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": \"2026-01-20T14:55:44.802122Z\",\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 179,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 5,\n        \"seat_number\": \"2A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": false\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 14:45:44\"\n        }\n    ],\n    \"payments\": [],\n    \"refunds\": []\n}"
+        },
+        {
+          "name": "booking",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"flight_id\": 1,\r\n    \"seat_id\": 45,\r\n    \"passenger_name\": \"John Doe\",\r\n    \"passenger_email\": \"john@example.com\",\r\n    \"passenger_phone\": \"+1234567890\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                ""
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:05:28 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, POST, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1005"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"booking_reference\": \"BK6131E84B\",\n    \"flight\": 1,\n    \"seat\": 45,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"SEAT_HELD\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 16:05:28\",\n    \"updated_at\": \"2026-01-20 16:05:28\",\n    \"seat_held_at\": \"2026-01-20 16:05:28\",\n    \"payment_initiated_at\": null,\n    \"confirmed_at\": null,\n    \"cancelled_at\": null,\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": \"2026-01-20T16:15:28.110461Z\",\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 178,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 45,\n        \"seat_number\": \"10A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": false\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 16:05:28\"\n        }\n    ],\n    \"payments\": [],\n    \"refunds\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"payment_method\": \"CREDIT_CARD\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/BK12345678/initiate_payment/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "BK12345678",
+            "initiate_payment",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST http://localhost:8000/api/bookings/BK12345678/initiate_payment/ \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"payment_method\": \"CREDIT_CARD\"\r\n  }'"
+      },
+      "response": [
+        {
+          "name": "payment",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"payment_method\": \"CREDIT_CARD\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK5985A5A2/initiate_payment/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK5985A5A2",
+                "initiate_payment",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:47:12 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1313"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"booking_reference\": \"BK5985A5A2\",\n    \"flight\": 1,\n    \"seat\": 5,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"PAYMENT_PENDING\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 14:45:44\",\n    \"updated_at\": \"2026-01-20 14:47:12\",\n    \"seat_held_at\": \"2026-01-20 14:45:44\",\n    \"payment_initiated_at\": \"2026-01-20 14:47:12\",\n    \"confirmed_at\": null,\n    \"cancelled_at\": null,\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": null,\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 179,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 5,\n        \"seat_number\": \"2A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": false\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"SEAT_HELD\",\n            \"to_state\": \"PAYMENT_PENDING\",\n            \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n            \"created_at\": \"2026-01-20 14:47:12\"\n        },\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 14:45:44\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"id\": 1,\n            \"transaction_id\": \"TXN7DE7EFC033\",\n            \"amount\": \"299.99\",\n            \"status\": \"PENDING\",\n            \"payment_method\": \"CREDIT_CARD\",\n            \"created_at\": \"2026-01-20 14:47:12\",\n            \"processed_at\": null\n        }\n    ],\n    \"refunds\": []\n}"
+        },
+        {
+          "name": "payment",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"payment_method\": \"CREDIT_CARD\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK6131E84B/initiate_payment/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK6131E84B",
+                "initiate_payment",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:05:47 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1315"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"booking_reference\": \"BK6131E84B\",\n    \"flight\": 1,\n    \"seat\": 45,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"PAYMENT_PENDING\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 16:05:28\",\n    \"updated_at\": \"2026-01-20 16:05:47\",\n    \"seat_held_at\": \"2026-01-20 16:05:28\",\n    \"payment_initiated_at\": \"2026-01-20 16:05:47\",\n    \"confirmed_at\": null,\n    \"cancelled_at\": null,\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": null,\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 178,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 45,\n        \"seat_number\": \"10A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": false\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"SEAT_HELD\",\n            \"to_state\": \"PAYMENT_PENDING\",\n            \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n            \"created_at\": \"2026-01-20 16:05:47\"\n        },\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 16:05:28\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"id\": 2,\n            \"transaction_id\": \"TXN91F8D87E16\",\n            \"amount\": \"299.99\",\n            \"status\": \"PENDING\",\n            \"payment_method\": \"CREDIT_CARD\",\n            \"created_at\": \"2026-01-20 16:05:47\",\n            \"processed_at\": null\n        }\n    ],\n    \"refunds\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "process payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"simulate_failure\": false\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/BK5985A5A2/process_payment/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "BK5985A5A2",
+            "process_payment",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST http://localhost:8000/api/bookings/BK12345678/process_payment/ \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"simulate_failure\": false\r\n  }'"
+      },
+      "response": [
+        {
+          "name": "process payment",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"simulate_failure\": false\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK5985A5A2/process_payment/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK5985A5A2",
+                "process_payment",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:48:42 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1552"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"booking\": {\n        \"id\": 1,\n        \"booking_reference\": \"BK5985A5A2\",\n        \"flight\": 1,\n        \"seat\": 5,\n        \"passenger_name\": \"John Doe\",\n        \"passenger_email\": \"john@example.com\",\n        \"passenger_phone\": \"+1234567890\",\n        \"state\": \"CANCELLED\",\n        \"amount\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:45:44\",\n        \"updated_at\": \"2026-01-20 14:48:42\",\n        \"seat_held_at\": \"2026-01-20 14:45:44\",\n        \"payment_initiated_at\": \"2026-01-20 14:47:12\",\n        \"confirmed_at\": null,\n        \"cancelled_at\": \"2026-01-20 14:48:42\",\n        \"expired_at\": null,\n        \"refunded_at\": null,\n        \"hold_expires_at\": null,\n        \"flight_details\": {\n            \"id\": 1,\n            \"flight_number\": \"AA101\",\n            \"origin\": \"New York (JFK)\",\n            \"destination\": \"Los Angeles (LAX)\",\n            \"departure_time\": \"2026-01-27 14:41:22\",\n            \"arrival_time\": \"2026-01-27 20:41:22\",\n            \"total_seats\": 180,\n            \"available_seats\": 180,\n            \"price\": \"299.99\",\n            \"created_at\": \"2026-01-20 14:41:22\"\n        },\n        \"seat_details\": {\n            \"id\": 5,\n            \"seat_number\": \"2A\",\n            \"seat_class\": \"BUSINESS\",\n            \"is_available\": true\n        },\n        \"state_history\": [\n            {\n                \"from_state\": \"PAYMENT_PENDING\",\n                \"to_state\": \"CANCELLED\",\n                \"notes\": \"Transitioned from PAYMENT_PENDING to CANCELLED\",\n                \"created_at\": \"2026-01-20 14:48:42\"\n            },\n            {\n                \"from_state\": \"SEAT_HELD\",\n                \"to_state\": \"PAYMENT_PENDING\",\n                \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n                \"created_at\": \"2026-01-20 14:47:12\"\n            },\n            {\n                \"from_state\": \"INITIATED\",\n                \"to_state\": \"SEAT_HELD\",\n                \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n                \"created_at\": \"2026-01-20 14:45:44\"\n            }\n        ],\n        \"payments\": [\n            {\n                \"id\": 1,\n                \"transaction_id\": \"TXN7DE7EFC033\",\n                \"amount\": \"299.99\",\n                \"status\": \"FAILED\",\n                \"payment_method\": \"CREDIT_CARD\",\n                \"created_at\": \"2026-01-20 14:47:12\",\n                \"processed_at\": \"2026-01-20 14:48:42\"\n            }\n        ],\n        \"refunds\": []\n    },\n    \"payment_status\": \"FAILED\",\n    \"message\": \"Payment failed\"\n}"
+        },
+        {
+          "name": "process payment",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"simulate_failure\": false\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK6131E84B/process_payment/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK6131E84B",
+                "process_payment",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:05:56 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1573"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"booking\": {\n        \"id\": 3,\n        \"booking_reference\": \"BK6131E84B\",\n        \"flight\": 1,\n        \"seat\": 45,\n        \"passenger_name\": \"John Doe\",\n        \"passenger_email\": \"john@example.com\",\n        \"passenger_phone\": \"+1234567890\",\n        \"state\": \"CONFIRMED\",\n        \"amount\": \"299.99\",\n        \"created_at\": \"2026-01-20 16:05:28\",\n        \"updated_at\": \"2026-01-20 16:05:56\",\n        \"seat_held_at\": \"2026-01-20 16:05:28\",\n        \"payment_initiated_at\": \"2026-01-20 16:05:47\",\n        \"confirmed_at\": \"2026-01-20 16:05:56\",\n        \"cancelled_at\": null,\n        \"expired_at\": null,\n        \"refunded_at\": null,\n        \"hold_expires_at\": null,\n        \"flight_details\": {\n            \"id\": 1,\n            \"flight_number\": \"AA101\",\n            \"origin\": \"New York (JFK)\",\n            \"destination\": \"Los Angeles (LAX)\",\n            \"departure_time\": \"2026-01-27 14:41:22\",\n            \"arrival_time\": \"2026-01-27 20:41:22\",\n            \"total_seats\": 180,\n            \"available_seats\": 178,\n            \"price\": \"299.99\",\n            \"created_at\": \"2026-01-20 14:41:22\"\n        },\n        \"seat_details\": {\n            \"id\": 45,\n            \"seat_number\": \"10A\",\n            \"seat_class\": \"ECONOMY\",\n            \"is_available\": false\n        },\n        \"state_history\": [\n            {\n                \"from_state\": \"PAYMENT_PENDING\",\n                \"to_state\": \"CONFIRMED\",\n                \"notes\": \"Transitioned from PAYMENT_PENDING to CONFIRMED\",\n                \"created_at\": \"2026-01-20 16:05:56\"\n            },\n            {\n                \"from_state\": \"SEAT_HELD\",\n                \"to_state\": \"PAYMENT_PENDING\",\n                \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n                \"created_at\": \"2026-01-20 16:05:47\"\n            },\n            {\n                \"from_state\": \"INITIATED\",\n                \"to_state\": \"SEAT_HELD\",\n                \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n                \"created_at\": \"2026-01-20 16:05:28\"\n            }\n        ],\n        \"payments\": [\n            {\n                \"id\": 2,\n                \"transaction_id\": \"TXN91F8D87E16\",\n                \"amount\": \"299.99\",\n                \"status\": \"SUCCESS\",\n                \"payment_method\": \"CREDIT_CARD\",\n                \"created_at\": \"2026-01-20 16:05:47\",\n                \"processed_at\": \"2026-01-20 16:05:56\"\n            }\n        ],\n        \"refunds\": []\n    },\n    \"payment_status\": \"SUCCESS\",\n    \"message\": \"Payment processed successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/BK6131E84B/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "BK6131E84B",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl http://localhost:8000/api/bookings/BK12345678/"
+      },
+      "response": [
+        {
+          "name": "bookings",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK5985A5A2/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK5985A5A2",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:51:17 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1487"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"booking_reference\": \"BK5985A5A2\",\n    \"flight\": 1,\n    \"seat\": 5,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"CANCELLED\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 14:45:44\",\n    \"updated_at\": \"2026-01-20 14:48:42\",\n    \"seat_held_at\": \"2026-01-20 14:45:44\",\n    \"payment_initiated_at\": \"2026-01-20 14:47:12\",\n    \"confirmed_at\": null,\n    \"cancelled_at\": \"2026-01-20 14:48:42\",\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": null,\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 180,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 5,\n        \"seat_number\": \"2A\",\n        \"seat_class\": \"BUSINESS\",\n        \"is_available\": true\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"PAYMENT_PENDING\",\n            \"to_state\": \"CANCELLED\",\n            \"notes\": \"Transitioned from PAYMENT_PENDING to CANCELLED\",\n            \"created_at\": \"2026-01-20 14:48:42\"\n        },\n        {\n            \"from_state\": \"SEAT_HELD\",\n            \"to_state\": \"PAYMENT_PENDING\",\n            \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n            \"created_at\": \"2026-01-20 14:47:12\"\n        },\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 14:45:44\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"id\": 1,\n            \"transaction_id\": \"TXN7DE7EFC033\",\n            \"amount\": \"299.99\",\n            \"status\": \"FAILED\",\n            \"payment_method\": \"CREDIT_CARD\",\n            \"created_at\": \"2026-01-20 14:47:12\",\n            \"processed_at\": \"2026-01-20 14:48:42\"\n        }\n    ],\n    \"refunds\": []\n}"
+        },
+        {
+          "name": "bookings",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK6131E84B/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK6131E84B",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:08:18 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1491"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"booking_reference\": \"BK6131E84B\",\n    \"flight\": 1,\n    \"seat\": 45,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"CONFIRMED\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 16:05:28\",\n    \"updated_at\": \"2026-01-20 16:05:56\",\n    \"seat_held_at\": \"2026-01-20 16:05:28\",\n    \"payment_initiated_at\": \"2026-01-20 16:05:47\",\n    \"confirmed_at\": \"2026-01-20 16:05:56\",\n    \"cancelled_at\": null,\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": null,\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 178,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 45,\n        \"seat_number\": \"10A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": false\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"PAYMENT_PENDING\",\n            \"to_state\": \"CONFIRMED\",\n            \"notes\": \"Transitioned from PAYMENT_PENDING to CONFIRMED\",\n            \"created_at\": \"2026-01-20 16:05:56\"\n        },\n        {\n            \"from_state\": \"SEAT_HELD\",\n            \"to_state\": \"PAYMENT_PENDING\",\n            \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n            \"created_at\": \"2026-01-20 16:05:47\"\n        },\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 16:05:28\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"id\": 2,\n            \"transaction_id\": \"TXN91F8D87E16\",\n            \"amount\": \"299.99\",\n            \"status\": \"SUCCESS\",\n            \"payment_method\": \"CREDIT_CARD\",\n            \"created_at\": \"2026-01-20 16:05:47\",\n            \"processed_at\": \"2026-01-20 16:05:56\"\n        }\n    ],\n    \"refunds\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "cancel confirmed booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"reason\": \"Travel plans changed\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/BK5985A5A2/cancel/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "BK5985A5A2",
+            "cancel",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST http://localhost:8000/api/bookings/BK12345678/cancel/ \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"reason\": \"Travel plans changed\"\r\n  }'"
+      },
+      "response": [
+        {
+          "name": "cancel confirmed booking",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"reason\": \"Travel plans changed\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK6131E84B/cancel/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK6131E84B",
+                "cancel",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:08:34 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1643"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"booking_reference\": \"BK6131E84B\",\n    \"flight\": 1,\n    \"seat\": 45,\n    \"passenger_name\": \"John Doe\",\n    \"passenger_email\": \"john@example.com\",\n    \"passenger_phone\": \"+1234567890\",\n    \"state\": \"CANCELLED\",\n    \"amount\": \"299.99\",\n    \"created_at\": \"2026-01-20 16:05:28\",\n    \"updated_at\": \"2026-01-20 16:08:34\",\n    \"seat_held_at\": \"2026-01-20 16:05:28\",\n    \"payment_initiated_at\": \"2026-01-20 16:05:47\",\n    \"confirmed_at\": \"2026-01-20 16:05:56\",\n    \"cancelled_at\": \"2026-01-20 16:08:34\",\n    \"expired_at\": null,\n    \"refunded_at\": null,\n    \"hold_expires_at\": null,\n    \"flight_details\": {\n        \"id\": 1,\n        \"flight_number\": \"AA101\",\n        \"origin\": \"New York (JFK)\",\n        \"destination\": \"Los Angeles (LAX)\",\n        \"departure_time\": \"2026-01-27 14:41:22\",\n        \"arrival_time\": \"2026-01-27 20:41:22\",\n        \"total_seats\": 180,\n        \"available_seats\": 179,\n        \"price\": \"299.99\",\n        \"created_at\": \"2026-01-20 14:41:22\"\n    },\n    \"seat_details\": {\n        \"id\": 45,\n        \"seat_number\": \"10A\",\n        \"seat_class\": \"ECONOMY\",\n        \"is_available\": true\n    },\n    \"state_history\": [\n        {\n            \"from_state\": \"CONFIRMED\",\n            \"to_state\": \"CANCELLED\",\n            \"notes\": \"Transitioned from CONFIRMED to CANCELLED\",\n            \"created_at\": \"2026-01-20 16:08:34\"\n        },\n        {\n            \"from_state\": \"PAYMENT_PENDING\",\n            \"to_state\": \"CONFIRMED\",\n            \"notes\": \"Transitioned from PAYMENT_PENDING to CONFIRMED\",\n            \"created_at\": \"2026-01-20 16:05:56\"\n        },\n        {\n            \"from_state\": \"SEAT_HELD\",\n            \"to_state\": \"PAYMENT_PENDING\",\n            \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n            \"created_at\": \"2026-01-20 16:05:47\"\n        },\n        {\n            \"from_state\": \"INITIATED\",\n            \"to_state\": \"SEAT_HELD\",\n            \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n            \"created_at\": \"2026-01-20 16:05:28\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"id\": 2,\n            \"transaction_id\": \"TXN91F8D87E16\",\n            \"amount\": \"299.99\",\n            \"status\": \"SUCCESS\",\n            \"payment_method\": \"CREDIT_CARD\",\n            \"created_at\": \"2026-01-20 16:05:47\",\n            \"processed_at\": \"2026-01-20 16:05:56\"\n        }\n    ],\n    \"refunds\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "refund",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"reason\": \"Customer requested cancellation\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/BK5985A5A2/refund/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "BK5985A5A2",
+            "refund",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST http://localhost:8000/api/bookings/BK12345678/refund/ \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"reason\": \"Customer requested cancellation\"\r\n  }'"
+      },
+      "response": [
+        {
+          "name": "refund",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"reason\": \"Customer requested cancellation\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/BK6131E84B/refund/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "BK6131E84B",
+                "refund",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:08:57 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2105"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"booking\": {\n        \"id\": 3,\n        \"booking_reference\": \"BK6131E84B\",\n        \"flight\": 1,\n        \"seat\": 45,\n        \"passenger_name\": \"John Doe\",\n        \"passenger_email\": \"john@example.com\",\n        \"passenger_phone\": \"+1234567890\",\n        \"state\": \"REFUNDED\",\n        \"amount\": \"299.99\",\n        \"created_at\": \"2026-01-20 16:05:28\",\n        \"updated_at\": \"2026-01-20 16:08:57\",\n        \"seat_held_at\": \"2026-01-20 16:05:28\",\n        \"payment_initiated_at\": \"2026-01-20 16:05:47\",\n        \"confirmed_at\": \"2026-01-20 16:05:56\",\n        \"cancelled_at\": \"2026-01-20 16:08:34\",\n        \"expired_at\": null,\n        \"refunded_at\": \"2026-01-20 16:08:57\",\n        \"hold_expires_at\": null,\n        \"flight_details\": {\n            \"id\": 1,\n            \"flight_number\": \"AA101\",\n            \"origin\": \"New York (JFK)\",\n            \"destination\": \"Los Angeles (LAX)\",\n            \"departure_time\": \"2026-01-27 14:41:22\",\n            \"arrival_time\": \"2026-01-27 20:41:22\",\n            \"total_seats\": 180,\n            \"available_seats\": 179,\n            \"price\": \"299.99\",\n            \"created_at\": \"2026-01-20 14:41:22\"\n        },\n        \"seat_details\": {\n            \"id\": 45,\n            \"seat_number\": \"10A\",\n            \"seat_class\": \"ECONOMY\",\n            \"is_available\": true\n        },\n        \"state_history\": [\n            {\n                \"from_state\": \"CANCELLED\",\n                \"to_state\": \"REFUNDED\",\n                \"notes\": \"Transitioned from CANCELLED to REFUNDED\",\n                \"created_at\": \"2026-01-20 16:08:57\"\n            },\n            {\n                \"from_state\": \"CONFIRMED\",\n                \"to_state\": \"CANCELLED\",\n                \"notes\": \"Transitioned from CONFIRMED to CANCELLED\",\n                \"created_at\": \"2026-01-20 16:08:34\"\n            },\n            {\n                \"from_state\": \"PAYMENT_PENDING\",\n                \"to_state\": \"CONFIRMED\",\n                \"notes\": \"Transitioned from PAYMENT_PENDING to CONFIRMED\",\n                \"created_at\": \"2026-01-20 16:05:56\"\n            },\n            {\n                \"from_state\": \"SEAT_HELD\",\n                \"to_state\": \"PAYMENT_PENDING\",\n                \"notes\": \"Transitioned from SEAT_HELD to PAYMENT_PENDING\",\n                \"created_at\": \"2026-01-20 16:05:47\"\n            },\n            {\n                \"from_state\": \"INITIATED\",\n                \"to_state\": \"SEAT_HELD\",\n                \"notes\": \"Transitioned from INITIATED to SEAT_HELD\",\n                \"created_at\": \"2026-01-20 16:05:28\"\n            }\n        ],\n        \"payments\": [\n            {\n                \"id\": 2,\n                \"transaction_id\": \"TXN91F8D87E16\",\n                \"amount\": \"299.99\",\n                \"status\": \"REFUNDED\",\n                \"payment_method\": \"CREDIT_CARD\",\n                \"created_at\": \"2026-01-20 16:05:47\",\n                \"processed_at\": \"2026-01-20 16:05:56\"\n            }\n        ],\n        \"refunds\": [\n            {\n                \"id\": 1,\n                \"refund_reference\": \"REF0F80FB403C\",\n                \"amount\": \"299.99\",\n                \"status\": \"PROCESSED\",\n                \"reason\": \"Customer requested cancellation\",\n                \"created_at\": \"2026-01-20 16:08:57\",\n                \"processed_at\": \"2026-01-20 16:08:57\"\n            }\n        ]\n    },\n    \"refund_reference\": \"REF0F80FB403C\",\n    \"refund_amount\": \"299.99\",\n    \"message\": \"Refund processed successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "expire holds",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/expire_holds/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            "expire_holds",
+            ""
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST http://localhost:8000/api/bookings/expire_holds/"
+      },
+      "response": [
+        {
+          "name": "expire holds",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/expire_holds/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "expire_holds",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 14:54:19 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "44"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Expired 0 seat holds\",\n    \"count\": 0\n}"
+        },
+        {
+          "name": "expire holds",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/expire_holds/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                "expire_holds",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:10:32 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "44"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Expired 1 seat holds\",\n    \"count\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "all confirmed bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/?state=CONFIRMED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            ""
+          ],
+          "query": [
+            {
+              "key": "state",
+              "value": "CONFIRMED"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl \"http://localhost:8000/api/bookings/?state=CONFIRMED\""
+      },
+      "response": []
+    },
+    {
+      "name": "all cancelled bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/?state=CANCELLED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            ""
+          ],
+          "query": [
+            {
+              "key": "state",
+              "value": "CANCELLED"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl \"http://localhost:8000/api/bookings/?state=CANCELLED\""
+      },
+      "response": [
+        {
+          "name": "all cancelled bookings",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/bookings/?state=CANCELLED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "bookings",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "state",
+                  "value": "CANCELLED"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 20 Jan 2026 16:10:56 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, POST, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "260"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"booking_reference\": \"BK5985A5A2\",\n            \"flight_number\": \"AA101\",\n            \"seat_number\": \"2A\",\n            \"passenger_name\": \"John Doe\",\n            \"state\": \"CANCELLED\",\n            \"amount\": \"299.99\",\n            \"created_at\": \"2026-01-20 14:45:44\",\n            \"hold_expires_at\": null\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "all expired bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/?state=EXPIRED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "bookings",
+            ""
+          ],
+          "query": [
+            {
+              "key": "state",
+              "value": "EXPIRED"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl \"http://localhost:8000/api/bookings/?state=EXPIRED\""
+      },
+      "response": []
+    }
+  ]
+}
